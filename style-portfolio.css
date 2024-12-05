@@ -1,0 +1,244 @@
+/* styles.css */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #987D7C, #A09CB0, #A3B9C9, #987D7C);
+    background-size: 800% 800%;
+    animation: gradientAnimation 20s ease infinite;
+    z-index: -1;
+}
+
+header {
+    background: #A09CB0;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Playfair Display', serif;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 50px;
+    margin: 10px 0;
+}
+
+h1 {
+    font-family: 'Cinzel Decorative';
+    font-size: 3.em;
+    color: black;
+    position: relative;
+    animation: glitch 1s infinite;
+}
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px,-2px);
+    }
+    60% {
+        transform: translate(2px,2px);
+    }
+    80% {
+        transform: translate(2px,-2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.nav {
+    color: black;
+    text-align: center;
+}
+
+.bordure-anime {
+    display: inline-block;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+p {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.photo-text {
+    display: flex;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.img {
+    border-radius: 40%;
+    max-width: 150px;
+    margin-left: 50px;
+}
+
+.projets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+.projet {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projet img {
+    max-width: 200px;
+    height: auto;
+}
+
+.projet img:hover {
+    transform: scale(1.2);
+}
+
+.projet figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: 'Playfair Display', serif;
+}
+
+.projet figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.parcours {
+    text-align: center;
+    margin: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact {
+    padding: 20px;
+    background-color: #987D7C;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact h2 {
+    margin: 10px 0 0 0;
+}
+
+.contact a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.contenu-footer {
+    margin: 0;
+    font-size: 14px;
+}
+
+.sociaux {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sociaux li {
+    margin: 0 10px;
+}
+
+.sociaux img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.sociaux img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .photo-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        margin: 0 0 20px 0;
+    }
+
+    .projets {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .projet {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projet img {
+        max-width: 100%;
+    }
+
+    .contact {
+        margin: 20px;
+        padding: 15px;
+    }
+}
